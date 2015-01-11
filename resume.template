@@ -31,11 +31,23 @@
 
 		.header {
 			text-align:center;
+      background-color: #c33;
+      color: white;
 			font-size: 2em;
-			margin-top:1em;
-			margin-left:5%;
-			margin-right:5%;
+      border: 20px solid white;
+			padding-top:1em;
+			padding-left:5%;
+			padding-right:5%;
+      padding-bottom: 2em;
 		}
+    .header a, .header a:visited{
+      color: #111;
+      transition: color 1s;
+    }
+    .header a:hover{
+      color: white;
+      text-decoration: none;
+    }
 		h1 {
 			font-size:3em;
 			margin-bottom:0;
@@ -55,6 +67,7 @@
 		}
 		.fa {
 			font-size:2em;
+      color: #c33;
 		}
 		.left {
 			font-size: 1em;
@@ -89,7 +102,7 @@
 			font-size: 1.5em;
 		}
 		.keywords {
-			background-color: #333333;
+			background-color: #c33;
 			color:#fff;
 			padding: 6px;
 			font-size: 1.2em;
@@ -146,7 +159,7 @@
   <body>
 	<div class= "header">
 		{{#pictureBool}}
-			<img src= "{{basics.picture}}" width= "75px" height= "75px" class= "picture">
+			<img src= "{{basics.picture}}" width= "200px" height= "200px" class= "picture">
 		{{/pictureBool}}
 		<h1>{{basics.capitalName}}</h1>
 		<h3 class= "label">{{basics.capitalLabel}}</h3>
@@ -194,7 +207,7 @@
 			<h2><i class= "fa fa-suitcase left"></i> WORK EXPERIENCE</h2>
 			{{#work}}
 				<div class= "job">
-					<h3>{{position}}, {{company}}</h3>
+					<h3>{{position}} <small>at</small> {{company}}</h3>
 					<h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</h4>
 					<p>{{summary}}</p>
 					{{#workHighlights}}
@@ -213,9 +226,9 @@
 		<div id= "volunteer">
 			<h2><i class= "fa fa-child left"></i> VOLUNTEER WORK</h2>
 			{{#volunteer}}
-			<h3>{{position}}, {{organization}}</h3>
+			<h3>{{position}} <small>at</small> <a href= "{{website}}" target= "_blank">{{organization}}</a></h3>
 			<h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}</h4>
-			<p>{{summary}}<br><a href= "{{website}}" target= "_blank">{{website}}</a></p>
+			<p>{{summary}}</p>
 			{{#volunterHighlights}}
 			<h4>HIGHLIGHTS</h4>
 			<ul>
@@ -242,7 +255,7 @@
 		<div id= "education">
 			<h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
 			{{#education}}
-				<h3>{{area}} {{#studyTypeBool}}, {{#studyType}}{{/studyTypeBool}}- {{institution}}</h3>
+				<h3>{{area}} {{#studyTypeBool}}, {{studyType}}{{/studyTypeBool}} - {{institution}}</h3>
 				<h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}{{#gpaBool}}<br>
 				GPA: {{gpa}}{{/gpaBool}}</h4>
 				{{#educationCourses}}

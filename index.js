@@ -160,6 +160,9 @@ resumeObject.basics.capitalLabel = (resumeObject.basics.label).toUpperCase();
 			    if (e.gpa) {
 			    	e.gpaBool = true;
 			    }
+					if(e.studyType){
+						e.e.studyTypeBool = true;
+					}
 				if (e.startDate) {
 					e.startDateYear = e.startDate.substr(0,4);
 					switch (e.startDate.substr(5,2)) {

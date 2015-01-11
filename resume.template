@@ -242,7 +242,7 @@
 		<div id= "education">
 			<h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
 			{{#education}}
-				<h3>{{area}} {{studyType}} - {{institution}}</h3>
+				<h3>{{area}} {{#studyTypeBool}}, {{#studyType}}{{/studyTypeBool}}- {{institution}}</h3>
 				<h4>{{startDateMonth}}{{startDateYear}} - {{endDateMonth}}{{endDateYear}}{{#gpaBool}}<br>
 				GPA: {{gpa}}{{/gpaBool}}</h4>
 				{{#educationCourses}}

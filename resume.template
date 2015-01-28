@@ -297,6 +297,15 @@
 			{{/publications}}
 		</div>
 		{{/publicationsBool}}
+		{{#languagesBool}}
+		<div id= "languages">
+			<h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
+			{{#languages}}
+				<h3>{{language}}</h3>
+				<h4>Fluency: {{fluency}}</h4>
+			{{/languages}}
+		</div>
+		{{/languagesBool}}
 		{{#interestsBool}}
 		<div id= "interests">
 			<h2><i class= "fa fa-star left"></i> INTERESTS</h2>
@@ -308,15 +317,6 @@
 			{{/interests}}
 		</div>
 		{{/interestsBool}}
-		{{#languagesBool}}
-		<div id= "languages">
-			<h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
-			{{#languages}}
-				<h3>{{language}}</h3>
-				<h4>Fluency: {{fluency}}</h4>
-			{{/languages}}
-		</div>
-		{{/languagesBool}}
 		{{#referencesBool}}
 		<div id= "references">
 			<h2><i class= "fa fa-thumbs-up left"></i> REFERENCES</h2>
